@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Trigger-Video-Scroll-Down</title>
+		<link href="stylesheets/style.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="//use.typekit.net/sqn3byi.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+		<script src="../build/jquery.js"></script>		
+		<script src="../build/mediaelement.js"></script>
+		<script src="testforfiles.js"></script>	
+	</head>
+	<body> 
+		<div classs="main">
+			<div class="block title">
+				<br><br>
+				<br><br>
+				<center><img class="image" src="images/logo-iw.png" alt="" width="300"></center>
+			</div>
+			<div class="block">
+				<h1>
+				<center>Trigger Video with Scroll Down</center>
+				</h1>
+				<br><br>
+				<p>
+					Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel vulputate massa. Pellentesque pharetra facilisis massa et sagittis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus cursus risus sed elementum molestie. Vestibulum ac risus neque. Pellentesque tincidunt tempus lorem eget luctus. Cras odio sapien, laoreet quis vestibulum in, cursus in justo. Quisque porta dui non metus faucibus sodales. Curabitur tincidunt nibh facilisis vestibulum pretium. Donec at dignissim lectus, in tempus justo. Maecenas sed leo orci. Sed quis tellus ac tellus pharetra aliquet sit amet vitae arcu. Fusce facilisis ante nec nisi pharetra, et ultrices velit dictum. Suspendisse vitae turpis ac purus iaculis rutrum vitae vitae elit.
+				</p>
+				<br><br>
+			</div>
+			<div class="block">
+				<div class="video">
+					<h3>Video 01</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel vulputate massa. Pellentesque pharetra facilisis massa et sagittis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus cursus risus sed elementum molestie. Vestibulum ac risus neque. Pellentesque tincidunt tempus lorem eget luctus. Cras odio sapien, laoreet quis vestibulum in, cursus in justo. Quisque porta dui non metus faucibus sodales.</p>
+					<center><video class="player1" src="video/IMG_2715.mp4" type="video/mp4" controls="controls"></video></center>
+					<span id="time"></span>					
+				</div>
+				<div class="video">
+					<h3>Video 02</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel vulputate massa. Pellentesque pharetra facilisis massa et sagittis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus cursus risus sed elementum molestie. Vestibulum ac risus neque. Pellentesque tincidunt tempus lorem eget luctus. Cras odio sapien, laoreet quis vestibulum in, cursus in justo. Quisque porta dui non metus faucibus sodales.</p>
+					<center><video class="player1" src="video/IMG_2719.mp4" type="video/mp4" controls="controls"></video></center>
+					<span id="time"></span>
+				</div>
+				<div class="video">
+					<h3>Video 03</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel vulputate massa. Pellentesque pharetra facilisis massa et sagittis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus cursus risus sed elementum molestie. Vestibulum ac risus neque. Pellentesque tincidunt tempus lorem eget luctus. Cras odio sapien, laoreet quis vestibulum in, cursus in justo. Quisque porta dui non metus faucibus sodales.</p>
+					<center><video class="player1" src="video/IMG_2725.mp4" type="video/mp4" controls="controls"></video></center>
+					<span id="time"></span>
+				</div>
+				<div class="video">
+					<h3>Video 04</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel vulputate massa. Pellentesque pharetra facilisis massa et sagittis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus cursus risus sed elementum molestie. Vestibulum ac risus neque. Pellentesque tincidunt tempus lorem eget luctus. Cras odio sapien, laoreet quis vestibulum in, cursus in justo. Quisque porta dui non metus faucibus sodales.</p>
+					<center><video class="player1" src="video/IMG_2731.mp4" type="video/mp4" controls="controls"></video></center>
+					<span id="time"></span>
+				</div>
+			</div>
+		</div>
+		<div class="spacer"></div>
+		<script>
+			MediaElement('player1', {success: function(me) {
+				
+				me.play();
+				
+				me.addEventListener('timeupdate', function() {
+					document.getElementById('time').innerHTML = me.currentTime;
+				}, false);
+				
+				document.getElementById('pp')['onclick'] = function() {
+					if (me.paused)
+						me.play();
+					else
+						me.pause();
+				};
+
+			}});
+		</script>
+	</body>
+</html>
+
